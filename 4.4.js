@@ -21,4 +21,5 @@ function sevenBoom(n)
         }
     }
 }
-console.log(sevenBoom(20));
+
+sevenBoom(19);
