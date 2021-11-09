@@ -1,6 +1,6 @@
 // Instructions
 // Create array with numbers :
-// const arr = [1,7,3,0,-5,7,3,9];
+// const arr  = [1,7,3,0,-5,7,3,9];
 // 1. Print with for loop all the number.
 // 2. Create function “arrayLength” that return the array length (don’t use arr.length)
 // 3. Create function “arraySum” , the function return the sum of all elements in array.
@@ -17,11 +17,12 @@ for(let i = 0; i<arr.length; i++){
 // 2. Create function “arrayLength” that return the array length (don’t use arr.length)
  const arrayLength = arr =>{
      let count = 0;
-    for(let i = 0; i<arr.length; i++){
+    for(let i = 0; arr[i] != null; i++){
         count++;
     }
     return count;
  }
+ arrayLength(arr);
 
  // 3. Create function “arraySum” , the function return the sum of all elements in array.
  const arraySum = arr =>{
