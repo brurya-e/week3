@@ -16,12 +16,16 @@ const percentageOfWorld = population => ((population/worldPopulation)*100).toFix
 
 
 const populations = [10,15,5,120];
-const populationPercentages = populations =>{
-    const percentages = [];
-    for (let i = 0; i<populations.length; i++)
-    {
-        percentages.push(percentageOfWorld(populations[i]));
-    }
+const populationPercentages = arr =>{
+    let percentages = [];
+    // for (let i = 0; i<arr.length; i++)
+    // {
+    //     percentages.push(percentageOfWorld(arr[i]));
+    // }
+    arr.forEach(element => {
+        percentages = [...percentages, percentageOfWorld(element)]
+       // percentages.push(percentageOfWorld(element));  
+    });  
     return percentages;
 }
 

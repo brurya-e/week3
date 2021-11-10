@@ -39,7 +39,7 @@ const bookUtils = {
     },
     setTranslation(book, _language, _translator) {
         //sets a new property of translation, which is an object that contains the translator and the language
-        book.translation = {...book.translation,
+        book.translation = {
             translator: _translator,
             language: _language
         }

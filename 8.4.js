@@ -16,14 +16,22 @@ const words = ["Hello", "Good Day", "Your Welcome", "hotdog", "hamburgers"];
 
 const countLetters = (array)=>{
     const count = {};
+    let max =0;
+    let occurrencesLetter ='';
+
     // array.forEach(word => { 
     for (let j =0; j< array.length;j++){
         let word = array[j].toLowerCase();
         for(let i =0; i< word.length; i++){
             (!(word[i] in count)) ? count[word[i]]=1 : count[word[i]]+=1;
+            if (count[word[i]] >= max){
+                max= count[word[i]];
+                occurrencesLetter = word[i];
+            }
         }
     }
-    return count;
+    console.log(`occurrencesLetter: ${occurrencesLetter}`);
+    return count ;
 }
         
 
