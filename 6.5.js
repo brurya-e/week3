@@ -7,7 +7,7 @@ const arr = Array(100).fill("hello");
 
 // Since the array is initialized with `undefined` on each position,
 // the value of `v` below will be `undefined`
-const arr2 = Array.from({length: 100}, (v, i) => i+1);
+const arr2 = Array.from({length: 100}, (_v, i) => i+1);
 
 // 3. Convert only values of an object into one array.
 function f() {
